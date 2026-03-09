@@ -2,7 +2,7 @@
 
 <img width="300px" alt="Graphiti-ts-small" src="https://github.com/shadynasrat/PICaSo/blob/main/docs/PICaSo_files/static/picaso_logo.png">
 
-## PICaSo: A Collaborative Robotics System for Inpainting on Physical Canvas Using Marker and Eraser
+## PICaSo 2.0: Real–Sim–Real Human Robot Co-Inpainting system on a Shared Physical Canvas
 
 <br />
 
@@ -17,7 +17,8 @@ Project Page : [Click Here](https://shadynasrat.github.io/PICaSo/)
 </div>
 
 # Abstract
-The integration of robotics and artificial intelligence has paved the way for innovative solutions in various domains. This paper introduces PICaSo (Physical Inpainting on Canvas Solution), a pioneering robotic painting system driven by fine-tuned text-to-image models. Departing from conventional approaches, PICaSo harnesses the power of tailored text-to-image algorithms to interpret natural language prompts and execute precise artistic renderings on canvas. Users guide the process by furnishing descriptive text, specifying desired imagery and placement, empowering the robotic arm to autonomously translate these instructions into physical artworks. Our system's innovation lies in its effective translation of digital inpainting processes into physical actions. Leveraging our multi-tools gripper, capable of seamlessly switching between eraser and pen functions, enables to seamlessly execute detailed drawings on canvas while also providing the flexibility to erase and redo sections as required. This paper comprehensively outlines the capabilities of the proposed system, explores potential applications across various domains, and addresses technical challenges encountered during its development.
+We present PICaSo 2.0, a humanoid, bi-manual robotic drawing system that performs Co-Inpainting on a shared physical canvas. Unlike one-way Sim→Real or prior “co-painting” approaches that mainly add content, Co-Inpainting is two-way and local: people draw/erase directly on the board; the system captures those on-surface changes, synchronizes a digital line-art state, and then executes mask-guided erase-then-redraw in that exact region within a Real→Sim→Real loop. Execution is embodied bi-manually for role legibility (left erases, right draws). PICaSo 2.0 reuses the line-art–biased inpainting and waypoint pipeline from PICaSo 1.0, with addition camera-feedback loop allowing translating human edits into the inpainting loop. We demonstrate the system in a single-canvas, 10-turn alternation with 10 volunteers (five human on-surface edits interleaved with five robot, mask-conditioned edits), and in two shorter replications (2 human + 2 robot), showing the ability and scalability of the system. To our knowledge, PICaSo 2.0 is the first system to allow human-robot co-inpainting within one closed loop on the same physical canvas. The fine-tuned line-art inpainting model is already public; we will release code, evaluation scripts, and an anonymized dataset from the study.
+
 
 <br />
 
